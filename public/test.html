@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ctrl</title>
+</head>
+
+<body>
+    <div>
+        <button id="startBtn">开始</button>
+        <button id="endBtn">结束</button>
+    </div>
+
+    <script>
+        var startBtn = document.getElementById('startBtn');
+        var endBtn = document.getElementById('endBtn');
+
+        // startBtn.onclick = function () {
+        //     loadImageAsync().then(function (data) {
+        //         console.log(data)
+        //     })
+        // };
+
+        // function loadImageAsync(url) {
+        //     return new Promise(function (resolve, reject) {
+        //         endBtn.onclick = function () {
+        //             resolve(123);
+        //         }
+        //     });
+        // }
+
+        var p = new Promise(function (resolve, reject) {
+            endBtn.onclick = function () {
+                resolve(123);
+            }
+        })
+
+        p.then(function (data) {
+            console.log(data)
+        })
+
+    </script>
+</body>
+
+</html>

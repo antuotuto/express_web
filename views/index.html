@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记艺</title>
+    <link rel="stylesheet" href="/css/reboot.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="page index-page">
+        <header>
+            <div class="navbar">
+                <div class="container">
+                    <div class="logo">
+                        <a href=""><img src="/db-transparent.png" alt=""></a>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">代码</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">人物</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">电影</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">生活</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">叙美</a>
+                        </li>
+                    </ul>
+                    <form action=""></form>
+                    <div class="user-nav">
+                        <a href="">登录</a>
+                        <a href="">注册</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-left">
+                        <ul class="note-list">
+                            {% for item in data %}
+                            <li class="item-note">
+                                <div class="content">
+                                    <div class="clearfix">
+                                        <a href="/jianshu/u/{{item.object.data.user.slug}}" class="avatar">
+                                            <img src="{{ item.object.data.user.avatar }}" alt="">
+                                        </a>
+                                        <a href="/jianshu/p/{{item.object.data.slug}}" class="title">{{ item.object.data.title }}</a>
+                                    </div>
+                                    <a href="/jianshu/p/{{item.object.data.slug}}">
+                                        <div class="wrap-img" style="background-size:cover;background-image:url('{{item.object.data.list_image_url}}')"></div>
+                                    </a>
+                                    <p class="abstract">{{item.object.data.public_abbr}}</p>
+                                    <div class="meta">
+                                        <span class="nickname">{{item.object.data.user.nickname}}</span>
+                                        <span class="time">{{item.object.data.important_collection.title}}</span>
+                                        <a class="source">segmentfault</a>
+                                    </div>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li>This would display if the 'item' collection were empty</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col col-right">
+                        <ul>
+                            <li>some things</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

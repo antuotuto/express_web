@@ -1,0 +1,76 @@
+/*Utilities*/
+/* Retina image */
+/* Short retina mixin for setting background-image and -size. */
+/**/
+/**/
+/*Components*/
+/*Skins*/
+/*Layout*/
+/*custom*/
+.note-list {
+  padding-left: 0;
+  list-style: none;
+}
+.item-note {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .04);
+}
+.item-note .avatar {
+  float: left;
+  display: block;
+  width: 40px;
+  margin-right: 6px;
+}
+.item-note .avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+.item-note .wrap-img {
+  height: 210px;
+  margin-top: 10px;
+  background-position: center center;
+}
+@media (min-width: 960px) {
+  .item-note .wrap-img {
+    border-radius: 3px;
+    display: none;
+    background-image: url("...") !important;
+  }
+}
+.item-note .title {
+  display: block;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  line-height: 20px;
+}
+.item-note .abstract {
+  margin: 10px 0;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, .02);
+  color: #000000;
+  color: rgba(0, 0, 0, .45);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 3px;
+}
+.item-note .meta {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  color: rgba(0, 0, 0, .45);
+}
+.item-note .meta:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.item-note .source {
+  float: right;
+}
+
+/*# sourceMappingURL=main.css.map */

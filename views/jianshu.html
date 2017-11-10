@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jianshu</title>
+    <link rel="stylesheet" href="/css/reboot.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-left">
+                <ul class="note-list">
+                    {% for item in data %}
+                    <li class="item-note">
+                        <div class="content">
+                            <div class="clearfix">
+                                <a href="/jianshu/u/{{item.object.data.user.slug}}" class="avatar">
+                                    <img src="{{ item.object.data.user.avatar }}" alt="">
+                                </a>
+                                <a href="/jianshu/p/{{item.object.data.slug}}" class="title">{{ item.object.data.title }}</a>
+                            </div>
+                            <a href="/jianshu/p/{{item.object.data.slug}}">
+                                <div class="wrap-img" style="background-size:cover;background-image:url('{{item.object.data.list_image_url}}')"></div>
+                            </a>
+                            <p class="abstract">{{item.object.data.public_abbr}}</p>
+                            <div class="meta">
+                                <span class="nickname">{{item.object.data.user.nickname}}</span>
+                                <span class="time">{{item.object.data.important_collection.title}}</span>
+                                <a class="source">segmentfault</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>This would display if the 'item' collection were empty</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col col-right">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

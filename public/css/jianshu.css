@@ -1,0 +1,25 @@
+/*Utilities*/
+/* Retina image */
+/* Short retina mixin for setting background-image and -size. */
+/**/
+/**/
+/*Components*/
+/*Skins*/
+/*Layout*/
+/*custom*/
+.article .image-package img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.article .content h1 {
+  color: #333333;
+}
+.article .content p {
+  color: #666666;
+}
+.article .content p b {
+  color: #000000;
+}
+
+/*# sourceMappingURL=jianshu.css.map */
